@@ -84,12 +84,14 @@ export default function App() {
     x: 0,
     y: 0,
     rotate: 1,
-    value: 0
+    value: 0,
+    changeX: 0,
+    changeY: 0
   });
 
   const [controls, setControls] = useState({
     image: true,
-    value: 0
+    value: 0,
   });
 
   const handleOnChange = (e) => {
@@ -126,7 +128,8 @@ export default function App() {
   const handleImage = ({ type, plus, count, key, title, ...rest }) => {
     setImageControls((preState) => ({
       ...preState,
-      [type]: imageControls[type] + count,
+      [type]: imageControls?.[type] + count,
+      changeX: imageControls["changeX"] + 1,
     }));
 
     if (plus) {
@@ -152,11 +155,11 @@ export default function App() {
     if (type === "changeX") {
       setControls((preState) => ({
         ...preState,
-        x: imageControls.x / 4 <= datas.motion_count_1 && imageControls.x,
+        x: imageControls.changeX / 4 <= datas.motion_count_11 && imageControls.changeX,
       }));
     }
 
-    if (type === "changeY") {
+    if (type === "setX") {
       setControls((preState) => ({
         ...preState,
         y: imageControls.y,
@@ -249,7 +252,7 @@ export default function App() {
         image: true,
       }));
     }
-    
+
     if (type === "hideImage") {
       setControls((preState) => ({
         ...preState,

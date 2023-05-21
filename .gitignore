@@ -3,7 +3,3 @@
 # dependencies
 /node_modules
 /.pnp
-
-
-# Local Netlify folder
-.netlify

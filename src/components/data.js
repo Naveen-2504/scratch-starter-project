@@ -21,8 +21,9 @@ export const Blocks = ({ handleOnChange, data }) => {
           id: 2,
           title: (
             <>
-              When
+              When{" "}
               <select
+                style={{ color: "black" }}
                 name="eventsKey"
                 id="eventsKey"
                 onChange={(e) => handleOnChange(e)}
@@ -70,7 +71,7 @@ export const Blocks = ({ handleOnChange, data }) => {
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
-              </select>
+              </select>{" "}
               key pressed
             </>
           ),
@@ -85,14 +86,15 @@ export const Blocks = ({ handleOnChange, data }) => {
           id: 4,
           title: (
             <>
-              When backdrop switches to
+              When backdrop switches to{" "}
               <select
+                style={{ color: "black" }}
                 name="eventsDrop"
                 id="eventsDrop"
                 onChange={(e) => handleOnChange(e)}
               >
                 <option value="backdrop1">backdrop1</option>
-              </select>
+              </select>{" "}
             </>
           ),
           style: "bg-yellow-500",
@@ -101,16 +103,17 @@ export const Blocks = ({ handleOnChange, data }) => {
           id: 5,
           title: (
             <>
-              When
+              When{" "}
               <select
+                style={{ color: "black", margin: 2 }}
                 name="eventCountType"
                 id="eventCountType"
                 onChange={(e) => handleOnChange(e)}
               >
                 <option value="loudness">loudness</option>
                 <option value="timer">timer</option>
-              </select>
-              {">"}{" "}
+              </select>{" "}
+              {" >"}
               <input
                 style={{ color: "#000", textAlign: "center" }}
                 onChange={(e) => handleOnChange(e)}
@@ -122,37 +125,37 @@ export const Blocks = ({ handleOnChange, data }) => {
           ),
           style: "bg-yellow-500",
         },
-        {
-          id: 6,
-          title: (
-            <>
-              When I receive
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-500",
-        },
-        {
-          id: 7,
-          title: (
-            <>
-              broadcast
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-500",
-        },
-        {
-          id: 8,
-          title: (
-            <>
-              broadcast
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-              and wait
-            </>
-          ),
-          style: "bg-yellow-500",
-        },
+        // {
+        //   id: 6,
+        //   title: (
+        //     <>
+        //       When I receive
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-500",
+        // },
+        // {
+        //   id: 7,
+        //   title: (
+        //     <>
+        //       broadcast
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-500",
+        // },
+        // {
+        //   id: 8,
+        //   title: (
+        //     <>
+        //       broadcast
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //       and wait
+        //     </>
+        //   ),
+        //   style: "bg-yellow-500",
+        // },
       ],
     },
     {
@@ -226,7 +229,12 @@ export const Blocks = ({ handleOnChange, data }) => {
           title: (
             <>
               go to{" "}
-              <select name="go" id="go" onChange={(e) => handleOnChange(e)}>
+              <select
+                style={{ color: "black", margin: 2 }}
+                name="go"
+                id="go"
+                onChange={(e) => handleOnChange(e)}
+              >
                 <option value="random">random position</option>
                 <option value="mouse">mouse-pointer</option>
               </select>
@@ -330,19 +338,17 @@ export const Blocks = ({ handleOnChange, data }) => {
           type: "direction",
           style: "bg-blue-500",
         },
-        {
-          id: 17,
-          title: (
-            <>
-              point towards
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-              {/* 
-            and wait */}
-            </>
-          ),
-          style: "bg-blue-500",
-          type: "changeX",
-        },
+        // {
+        //   id: 17,
+        //   title: (
+        //     <>
+        //       point towards
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        //   type: "changeX",
+        // },
         {
           id: 18,
           title: (
@@ -357,7 +363,7 @@ export const Blocks = ({ handleOnChange, data }) => {
               />
             </>
           ),
-          type: "changeY",
+          type: "changeX",
           style: "bg-blue-500",
         },
         {
@@ -374,6 +380,7 @@ export const Blocks = ({ handleOnChange, data }) => {
               />
             </>
           ),
+          type: "setX",
           style: "bg-blue-500",
         },
         {
@@ -390,6 +397,7 @@ export const Blocks = ({ handleOnChange, data }) => {
               />
             </>
           ),
+          type: "setY",
           style: "bg-blue-500",
         },
         {
@@ -397,46 +405,46 @@ export const Blocks = ({ handleOnChange, data }) => {
           title: "if on edge, bounce",
           style: "bg-blue-500",
         },
-        {
-          id: 1,
-          title: (
-            <>
-              set rotation style
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-blue-500",
-        },
-        {
-          id: 22,
-          title: (
-            <>
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />x
-              position
-            </>
-          ),
-          style: "bg-blue-500",
-        },
-        {
-          id: 23,
-          title: (
-            <>
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />y
-              position
-            </>
-          ),
-          style: "bg-blue-500",
-        },
-        {
-          id: 24,
-          title: (
-            <>
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-              direction
-            </>
-          ),
-          style: "bg-blue-500",
-        },
+        // {
+        //   id: 1,
+        //   title: (
+        //     <>
+        //       set rotation style
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
+        // {
+        //   id: 22,
+        //   title: (
+        //     <>
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />x
+        //       position
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
+        // {
+        //   id: 23,
+        //   title: (
+        //     <>
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />y
+        //       position
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
+        // {
+        //   id: 24,
+        //   title: (
+        //     <>
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //       direction
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
       ],
     },
     {
@@ -461,129 +469,129 @@ export const Blocks = ({ handleOnChange, data }) => {
           type: "x",
           plus: true,
         },
-        {
-          id: 26,
-          title: (
-            <>
-              repeat
-              <Icon name="undo" size={15} className="text-white-600 mx-2" />
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_2}
-                name="control_count_2"
-                className="w-1/6 mx-2 rounded-full"
-              />
-              <Icon name="undo" size={15} className="text-white-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-600",
-          type: "rotate",
-          plus: true,
-        },
-        {
-          id: 27,
-          title: (
-            <>
-              forever
-              <Icon name="redo" size={15} className="text-white-600 mx-2" />
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_3}
-                name="control_count_3"
-                className="w-1/6 mx-2 rounded-full"
-              />{" "}
-              <Icon name="redo" size={15} className="text-white-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-600",
-          type: "rotate",
-        },
-        {
-          id: 28,
-          title: (
-            <>
-              if then
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-600",
-        },
-        {
-          id: 29,
-          title: (
-            <>
-              if{" "}
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_4}
-                name="control_count_4"
-                className="w-1/6 mx-2 rounded-full"
-              />{" "}
-              then{" "}
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-              else{" "}
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-              <Icon name="redo" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-600",
-        },
-        {
-          id: 30,
-          title: (
-            <>
-              wait until{" "}
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_5}
-                name="control_count_5"
-                className="w-1/6 mx-2 rounded-full"
-              />{" "}
-            </>
-          ),
-          style: "bg-yellow-600",
-        },
-        {
-          id: 31,
-          title: (
-            <>
-              repeat until{" "}
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_6}
-                name="control_count_6"
-                className="w-1/6 mx-2 rounded-full"
-              />{" "}
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-yellow-600",
-        },
-        {
-          id: 32,
-          title: (
-            <>
-              stop all{" "}
-              <input
-                style={{ color: "#000", textAlign: "center" }}
-                onChange={(e) => handleOnChange(e)}
-                value={data?.control_count_7}
-                name="control_count_7"
-                className="w-1/6 mx-2 rounded-full"
-              />
-              {/* <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            and wait */}
-            </>
-          ),
-          style: "bg-yellow-600",
-        },
+        // {
+        //   id: 26,
+        //   title: (
+        //     <>
+        //       repeat
+        //       <Icon name="undo" size={15} className="text-white-600 mx-2" />
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_2}
+        //         name="control_count_2"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />
+        //       <Icon name="undo" size={15} className="text-white-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        //   type: "rotate",
+        //   plus: true,
+        // },
+        // {
+        //   id: 27,
+        //   title: (
+        //     <>
+        //       forever
+        //       <Icon name="redo" size={15} className="text-white-600 mx-2" />
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_3}
+        //         name="control_count_3"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />{" "}
+        //       <Icon name="redo" size={15} className="text-white-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        //   type: "rotate",
+        // },
+        // {
+        //   id: 28,
+        //   title: (
+        //     <>
+        //       if then
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        // },
+        // {
+        //   id: 29,
+        //   title: (
+        //     <>
+        //       if{" "}
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_4}
+        //         name="control_count_4"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />{" "}
+        //       then{" "}
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //       else{" "}
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //       <Icon name="redo" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        // },
+        // {
+        //   id: 30,
+        //   title: (
+        //     <>
+        //       wait until{" "}
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_5}
+        //         name="control_count_5"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />{" "}
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        // },
+        // {
+        //   id: 31,
+        //   title: (
+        //     <>
+        //       repeat until{" "}
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_6}
+        //         name="control_count_6"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />{" "}
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        // },
+        // {
+        //   id: 32,
+        //   title: (
+        //     <>
+        //       stop all{" "}
+        //       <input
+        //         style={{ color: "#000", textAlign: "center" }}
+        //         onChange={(e) => handleOnChange(e)}
+        //         value={data?.control_count_7}
+        //         name="control_count_7"
+        //         className="w-1/6 mx-2 rounded-full"
+        //       />
+        //       {/* <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     and wait */}
+        //     </>
+        //   ),
+        //   style: "bg-yellow-600",
+        // },
         {
           id: 33,
           title: "when I start as a clone",
@@ -759,7 +767,8 @@ export const Blocks = ({ handleOnChange, data }) => {
                 value={data?.look_count_8}
                 name="look_count_8"
                 className="w-1/6 mx-2 rounded-full"
-              /> %
+              />{" "}
+              %
             </>
           ),
           type: "size_text_per",
@@ -810,13 +819,13 @@ export const Blocks = ({ handleOnChange, data }) => {
           id: 49,
           title: "show",
           style: "bg-blue-500",
-          type: "showImage"
+          type: "showImage",
         },
         {
           id: 50,
           title: "hide",
           style: "bg-blue-500",
-          type: "hideImage"
+          type: "hideImage",
         },
         // {
         //   id: 51,
@@ -847,31 +856,31 @@ export const Blocks = ({ handleOnChange, data }) => {
         //   ),
         //   style: "bg-blue-500",
         // },
-        {
-          id: 53,
-          title: (
-            <>
-              costume
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-blue-500",
-        },
-        {
-          id: 54,
-          title: (
-            <>
-              backdrop
-              <Icon name="flag" size={15} className="text-green-600 mx-2" />
-            </>
-          ),
-          style: "bg-blue-500",
-        },
-        {
-          id: 55,
-          title: "size",
-          style: "bg-blue-500",
-        },
+        // {
+        //   id: 53,
+        //   title: (
+        //     <>
+        //       costume
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
+        // {
+        //   id: 54,
+        //   title: (
+        //     <>
+        //       backdrop
+        //       <Icon name="flag" size={15} className="text-green-600 mx-2" />
+        //     </>
+        //   ),
+        //   style: "bg-blue-500",
+        // },
+        // {
+        //   id: 55,
+        //   title: "size",
+        //   style: "bg-blue-500",
+        // },
       ],
     },
   ];
